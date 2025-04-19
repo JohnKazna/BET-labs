@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погодний застосунок</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Погодний застосунок</h1>
+        <p>Виберіть місто, щоб дізнатися поточну погоду</p>
+    </header>
+
+    <div class="city-menu">
+        <button class="city-btn" data-city="Kyiv">Київ</button>
+        <button class="city-btn" data-city="Lviv">Львів</button>
+        <button class="city-btn" data-city="Odesa">Одеса</button>
+        <button class="city-btn" data-city="Kharkiv">Харків</button>
+        <button class="city-btn" data-city="Dnipro">Дніпро</button>
+        <button class="city-btn" id="my-location">Тетіїв</button>
+    </div>
+
+    <div id="weather-container">
+        <p class="hint">Виберіть місто для отримання погоди</p>
+    </div>
+
+    <script>
+        document.querySelectorAll(".city-btn").forEach(button => {
+            button.addEventListener('click', () => {
+                if (button.id === 'my-location') {
+                    window.location.href = `/weather/current`;
+                } else {
+                    const city = button.getAttribute('data-city');
+                    window.location.href = `/weather/${city}`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

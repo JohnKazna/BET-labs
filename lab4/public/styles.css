@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f8ff;
+    color: #333;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.city-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.city-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+.city-btn:hover {
+    background-color: #2980b9;
+}
+.city-btn.my-location {
+    background-color: #e74c3c;
+}
+.city-btn.my-location:hover {
+    background-color: #c0392b;
+}
+#weather-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+.weather-main {
+    font-size: 2em;
+    font-weight: bold;
+}
+.weather-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+.detail-item {
+    background-color: #c6c6c6;
+    padding: 10px;
+    border-radius: 4px;
+}
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.error {
+    color: #e74c3c;
+    text-align: center;
+    padding: 20px;
+}
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+}
